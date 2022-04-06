@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 2000px;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/p1.jpg);
+    background-size: cover;
+}
+
+.home .nav {
+    background-color: rgba(0, 0, 0, .5);
+    overflow: auto;
+}
+
+.home .nav ul {
+    list-style-type: none;
+}
+
+.home .nav ul li {
+    margin: 20px;
+    float: right;
+}
+
+.home .nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: all .5s;
+}
+
+.home .nav ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.home .nav ul .logo {
+    float: left;
+    margin: 10px;
+}
+
+.home .nav ul li img {
+    width: 40px;
+}
+
+/* End navBar */
+
+.home .caption {
+
+    text-align: center;
+}
+
+.home .caption img {
+    width: 400px;
+    transition: all 1s;
+}
+
+.home .caption img:hover {
+    transform: rotate(360deg) scale(1.2, 1.2) translate(-400px);
+}
+
+.home .caption h1 {
+    padding: 30px 0px;
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home .caption button {
+    width: 20%;
+    background-color: gray;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 0px;
+    border-radius: 20px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.home .caption button:hover {
+    transform: scale(1.3, 1.3);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* ============== */
+
+#products {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/p2.jpg);
+    background-size: 100% 100%;
+    padding: 100px 0px;
+    color: white;
+    text-align: center;
+
+}
+
+.productNav {
+    width: 30%;
+    border-bottom: 2px solid white;
+    margin: auto;
+    padding-bottom: 5px;
+    border-radius: 20px;
+}
+
+.productNav h1 {
+    border-left: 2px solid purple;
+    border-right: 2px solid purple;
+
+}
+
+.container {
+    display: flex;
+}
+
+.item {
+    width: 32%;
+    background-color: #444;
+    color: white;
+    margin: 20px;
+    padding-bottom: 10px;
+}
+
+.item h1 {
+    padding: 30px 0px;
+}
+
+.item img {
+    width: 100%;
+
+}
+
+.item button {
+    width: 60%;
+    background-color: gray;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 0px;
+    border-radius: 20px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* ======== */
+#profiles {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/p2.jpg);
+    background-size: 100% 100%;
+    padding: 100px 0px;
+    color: white;
+    text-align: center;
+}
+
+#profiles .profileNav {
+    width: 30%;
+    margin: auto;
+    padding-bottom: 5px;
+    /* border-radius: 20px; */
+
+}
+
+#profiles .profileNav h1 {
+    position: relative;
+}
+
+#profiles .profileNav h1::after {
+    content: "";
+    width: 25%;
+    height: 4px;
+    background: linear-gradient(to left, white, red);
+    position: absolute;
+    right: 0px;
+    border-radius: 20px;
+    top: 50%;
+}
+
+#profiles .profileNav h1::before {
+    content: "";
+    width: 25%;
+    height: 4px;
+    background: linear-gradient(to right, white, red);
+    position: absolute;
+    border-radius: 20px;
+    left: 0px;
+    top: 50%;
+}
+
+#profiles .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+#profiles .profile {
+    width: 26%;
+    height: 300px;
+    margin: 10px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+#profiles .profile img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#profiles .caption {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    transition: all 1s;
+    position: absolute;
+    right: 100%;
+    top: 100%;
+}
+
+#profiles .profile:hover .caption {
+    top: 0;
+    right: 0;
+    transform: rotate(360deg);
+}
+
+#profiles .profile .caption h1 {
+    padding: 50px 0px;
+    text-decoration: underline;
+}
+
+#profiles .profile .caption p {
+    padding: 30px;
+    font-weight: bold;
+}
+
+#profiles .profile .caption button {
+    width: 60%;
+    background-color: gray;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 0px;
+    border-radius: 20px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+@media(max-width:750px) {
+    #profiles .profileNav h1 {
+        font-size: 25px;
+    }
+
+    #profiles .profileNav {
+        width: 80%;
+    }
+    #profiles .profile {
+        width: 90%;
+    }
+}
